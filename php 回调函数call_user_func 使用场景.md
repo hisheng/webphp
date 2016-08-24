@@ -43,7 +43,17 @@ function sayhi($name){
 $name = '周杰伦';
 call_user_func('sayhi',$name); //周杰伦 您好
 ```
-### 2.call_user_func 带多个参数
+### 2.call_user_func 带参数,带返回值return
+``` php
+function myname($name){
+    return '我的名字是'.$name;
+}
+$name = '周杰伦';
+$myname = call_user_func('myname',$name); 
+echo $myname; //我的名字是周杰伦
+```
+
+### 3.call_user_func 带多个参数
 ``` php
 function say($name,$hi){
     echo $name.' '.$hi;
@@ -52,7 +62,7 @@ $name = '周杰伦';
 $hi = '你好啊';
 call_user_func('say',$name,$hi); //周杰伦 你好啊
 ```
-### 3.call_user_func_array 带1个数组，代替2的情况
+### 4.call_user_func_array 带1个数组，代替2的情况
 ``` php
 function saynew($p){
     echo $p['name'].' '.$p['hi'];
