@@ -70,6 +70,6 @@ function saynew($p){
 $name = '周杰伦';
 $hi = '你好啊';
 $p = array('name'=>$name,'hi'=>$hi);
-call_user_func('saynew',$p); //周杰伦 你好啊
+call_user_func_array('saynew',$p); //周杰伦 你好啊
 ```
 
